@@ -19,6 +19,14 @@ def run():
             user_data_dir=user_data_dir,
             # headless=False if manutencao == "true" else True,
             headless=False,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--disable-web-security",
+                    "--disable-features=IsolateOrigins,site-per-process",
+                    "--disable-infobars",
+                    "--window-size=1280,800",
+                    "--start-maximized",
+                ],
         )
 
         try:
@@ -74,3 +82,4 @@ def run():
 
 # if __name__ == "__main__":
 #     run()
+
